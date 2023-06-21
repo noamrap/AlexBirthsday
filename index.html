@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>מזל טוב לאבא</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, pink, purple);
+        }
+
+        .swiper-container {
+            width: 80%;
+            height: 80%;
+        }
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+            .swiper-slide img {
+                width: 100%;
+                max-width: 800px;
+                height: auto;
+                object-fit: cover;
+                margin: auto;
+                border: 3px solid yellow; /* Add border here */
+            }
+
+            .swiper-slide .slide-caption {
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: orangered; /* Changed text color to orange */
+                font-size: 20px;
+                background-color: lightblue; /* Background color is blue */
+                padding: 15px;
+                border-radius: 15px;
+                max-width: 600px;
+            }
+
+
+        @media screen and (max-width: 1200px) {
+            .swiper-slide img {
+                max-width: 320px;
+            }
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            color: yellow !important; /* Add color here */
+        }
+    </style>
+</head>
+<body>
+    <audio controls autoplay loop>
+        <source src="מוקי - ילד של אבא (mp3cut.net).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="aba1.jpg" alt="Photo 2">
+                <p class="slide-caption">לאבא</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="aba3.jpg" alt="Photo 2">
+                <p class="slide-caption">הכי</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="aba11.jpg" alt="Photo 2">
+                <p class="slide-caption">חכם</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="aba5.jpg" alt="Photo 2">
+                <p class="slide-caption">יפה</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="aba6.jpg" alt="Photo 2">
+                <p class="slide-caption">אכפתי ותורם</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="aba4.jpg" alt="Photo 2">
+                <p class="slide-caption">שיש</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="aba7.jpg" alt="Photo 2">
+                <p class="slide-caption">הדרך שבה אתה נוהג כלפי החלשים ממך אומרת עליך המון ואני מעריץ אותך על כך</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="aba8.jpg" alt="Photo 2">
+                <p class="slide-caption">אתה </p>
+            </div>
+            <div class="swiper-slide">
+                <img src="aba9.jpg" alt="Photo 2">
+                <p class="slide-caption">אב</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="aba10.jpg" alt="Photo 2">
+                <p class="slide-caption">למופת</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="aba2.jpg" alt="Photo 2">
+                <p class="slide-caption">שתמיד מפנק אותנו </p>
+            </div>
+            <div class="swiper-slide">
+                <img src="aba12.jpg" alt="Photo 2">
+                <p class="slide-caption"> תודה ומזל טוב</p>
+            </div>
+            <div class="swiper-slide">
+                <img src="aba14.jpg" alt="Photo 2">
+                <p class="slide-caption">מבנך הבכור </p>
+            </div>
+            <div class="swiper-slide">
+                <img src="aba15.jpg" alt="Photo 3">
+                <p class="slide-caption">נועם</p>
+            </div>
+
+        </div>
+
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+
+            // Enable keyboard control
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
+
+            // Add some nice transition effect
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+
+            // Swiper event listeners
+            on: {
+                slideChange: function () {
+                    const audio = document.querySelector('audio');
+                    if (this.activeIndex === 1 || this.activeIndex === 2 || this.activeIndex === 3 || this.activeIndex === 4 || this.activeIndex === 5 || this.activeIndex === 6 || this.activeIndex === 7 || this.activeIndex === 8 || this.activeIndex === 9 || this.activeIndex === 10 || this.activeIndex === 11|| this.activeIndex === 12 || this.activeIndex === 13 || this.activeIndex === 14 || this.activeIndex === 15 || this.activeIndex === 16  &&audio.paused) {
+                        audio.play();
+                    } else if (this.activeIndex !== 1 && !audio.paused) {
+                        audio.pause();
+                    }
+                },
+            },
+        });
+    </script>
+
+
+
+</body>
+</html>
